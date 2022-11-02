@@ -12,7 +12,7 @@ def get_citations_needed_count(url):
     soup = BeautifulSoup(page.content, 'html.parser')
     citations = soup.find_all('a', title='Wikipedia:Citation needed')
     count = len(citations)
-    print(count) 
+    return count 
 
 #  Create function to get citations needed report
 def get_citations_needed_report(url):
@@ -25,10 +25,12 @@ def get_citations_needed_report(url):
         if paragraph.find('a', title='Wikipedia:Citation needed'):
             paragraph=paragraph.text.strip().replace('[citation needed]','')
             all.append(paragraph)
-    print(all)
+    return all
 
 # to show the final result
 
 if __name__ == '__main__':
-    get_citations_needed_count(url)
-    get_citations_needed_report(url)
+    print(get_citations_needed_count(url))
+    x = get_citations_needed_report(url)
+    for i in x:
+        print(i,"\n")
