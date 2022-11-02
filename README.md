@@ -14,7 +14,7 @@
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `python scraper.py`
+- e.g. `python Web_Scraping/scraper.py`
 
 #### How to use your library (where applicable)
 
